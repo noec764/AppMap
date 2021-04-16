@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_row(form.nom_entreprise,{'label':"Nom de l'entreprise",'attr':{'placeholder':"Nom de l'entreprise"}}) }}
+    {{ form_row(form.adresse_entreprise,{'label':"Adresse de l'entrepise",'attr':{'placeholder':"Adresse ..."}}) }}
+    {{ form_row(form.num_siret,{'label':"Numéro Siret",}) }}
+    {{ form_row(form.description,{'label':"Description",'attr':{'placeholder':"Description"}}) }}
+    <button type="submit" class="btn btn-primary">Inscription</button>
+    {{ form_end(form) }}
+{% endblock %}
